@@ -1,0 +1,15 @@
+requset :
+curl -si  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1/image -X POST -H "X-Auth-Token:$TOKEN" -H "X-Object-Meta-Book: GoodbyeColumbus"
+
+response :
+HTTP/1.1 202 Accepted
+Content-Length: 76
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: tx8544d1597ae241e3957c2-0056e04000
+Date: Wed, 09 Mar 2016 15:23:45 GMT
+
+curl -si  http://localhost:8099/v2.0/2/storage2/image -X POST -H "X-Auth-Token:2:admin" -H "X-Object-Meta-Book: GoodbyeColumbus"
+HTTP/1.1 204 No Content
+Server: Apache-Coyote/1.1
+x-compute-request-id: req-c2abf1a9-f2f1-4baa-bb07-e3903481d818
+Date: Wed, 09 Mar 2016 15:36:39 GMT

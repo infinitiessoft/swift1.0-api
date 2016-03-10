@@ -1,0 +1,15 @@
+request : 
+curl -si  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1 -X POST -H "X-Auth-Token: $TOKEN" -H "X-Container-Meta-Author: MarkTwain" -H "X-Container-Meta-Web-Directory-Type: text/directory" -H "X-Container-Meta-Century: Nineteenth"
+
+response :
+HTTP/1.1 204 No Content
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: tx7a7915a7ba734dc7be9ae-0056dfebc1
+Date: Wed, 09 Mar 2016 09:24:17 GMT
+
+curl -si  http://localhost:8099/v2.0/2/storage2 -X POST -H "X-Auth-Token:2:admin" -H "X-Container-Meta-Author: MarkTwain" -H "X-Container-Meta-Web-Directory-Type: text/directory" -H "X-Container-Meta-Century: Nineteenth"
+HTTP/1.1 204 No Content
+Server: Apache-Coyote/1.1
+x-compute-request-id: req-9a3f06fc-c10f-44e9-a710-b55527740c07
+Date: Wed, 09 Mar 2016 09:30:59 GMT

@@ -1,0 +1,16 @@
+request :
+curl -si  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1/image -X POST -H "X-Auth-Token:$TOKEN" -H "X-Remove-Object-Meta-Book: x"
+
+response : 
+HTTP/1.1 202 Accepted
+Content-Length: 76
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: tx83c3df2dcc7142bbba73a-0056e04258
+Date: Wed, 09 Mar 2016 15:33:44 GMT
+
+
+curl -si  http://localhost:8099/v2.0/2/storage2/image -X POST -H "X-Auth-Token:2:admin" -H "X-Remove-Object-Meta-Book: x"
+HTTP/1.1 204 No Content
+Server: Apache-Coyote/1.1
+x-compute-request-id: req-888f4072-0c14-4efa-8546-0fe73de2c118
+Date: Wed, 09 Mar 2016 15:38:05 GMT

@@ -1,0 +1,31 @@
+request :
+curl -si -X GET -H "X-Auth-Token:$TOKEN"  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1?format=json
+
+response : 
+
+HTTP/1.1 200 OK
+Content-Length: 490
+X-Container-Object-Count: 3
+Accept-Ranges: bytes
+X-Storage-Policy: Policy-0
+X-Container-Bytes-Used: 227970
+X-Timestamp: 1456986723.68054
+Content-Type: application/json; charset=utf-8
+X-Trans-Id: txdc05442582854428bbe77-0056d908d0
+Date: Fri, 04 Mar 2016 04:02:24 GMT
+
+[{"hash": "a468e32f9d533d316e1375de839fd0e7", "last_modified": "2016-03-04T03:58:31.318980", "bytes": 95622, "name": "30862.jpg", "content_type": "image/jpeg"}, 
+{"hash": "d41d8cd98f00b204e9800998ecf8427e", "last_modified": "2016-03-04T03:57:55.221800", "bytes": 0, "name": "vhd/", "content_type": "application/octet-stream"},
+{"hash": "fdea98540b07f6357973f56552e76137", "last_modified": "2016-03-04T03:58:19.167760", "bytes": 132348, "name": "vhd/30863.jpg", "content_type": "image/jpeg"}]
+
+curl -H "X-Auth-Token:2:admin" -X GET http://localhost:8099/v2.0/2/storage1
+{
+  "objects" : [ {
+    "subdir" : null,
+    "name" : "image",
+    "hash" : null,
+    "bytes" : 55689,
+    "content_type" : "application/octet-stream",
+    "last_modified" : null
+  } ]
+}

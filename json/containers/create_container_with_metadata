@@ -1,0 +1,17 @@
+request :
+curl -si -H "X-Auth-Token:$TOKEN" -X PUT -H "Content-type: application/json" http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage3 -H "X-Container-Meta-Book: TomSawyer"
+
+response :
+HTTP/1.1 201 Created
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: tx6cabf74f58a24fc099808-0056d945da
+Date: Fri, 04 Mar 2016 08:22:50 GMT
+
+curl -si -H "X-Auth-Token:2:admin" -H "Content-Type:application/json" -X PUT http://localhost:8099/v2.0/2/storage1  -d '{"metadata" : {"X-Container-Meta-Book" : "TomSawyer"}}'
+
+HTTP/1.1 201 Created
+Server: Apache-Coyote/1.1
+x-compute-request-id: req-83cbb25f-5582-40a8-a7f5-983d64bafd39
+Content-Length: 0
+Date: Wed, 09 Mar 2016 07:13:39 GMT

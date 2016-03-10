@@ -1,0 +1,17 @@
+request :
+curl -si -H "X-Auth-Token:$TOKEN" -X PUT -H "Content-type: application/json" http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage2
+
+response :
+HTTP/1.1 201 Created
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: txd4981a09fc4d4fd48805a-0056d93ba5
+Date: Fri, 04 Mar 2016 07:39:17 GMT
+
+
+curl -si -H "X-Auth-Token:2:admin" -X PUT http://localhost:8099/v2.0/2/storage1
+HTTP/1.1 201 Created
+Server: Apache-Coyote/1.1
+x-compute-request-id: req-0ccd2122-163a-4641-9ada-9ab3b57b7fa9
+Content-Length: 0
+Date: Wed, 09 Mar 2016 07:12:31 GMT

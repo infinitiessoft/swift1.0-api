@@ -1,0 +1,32 @@
+request :
+curl -si -X HEAD -H "X-Auth-Token:$TOKEN"  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1
+
+response :
+HTTP/1.1 204 No Content
+Content-Length: 0
+X-Container-Object-Count: 1
+Accept-Ranges: bytes
+X-Storage-Policy: Policy-0
+X-Container-Bytes-Used: 12
+X-Timestamp: 1456986723.68054
+Content-Type: text/plain; charset=utf-8
+X-Trans-Id: tx49b4c4323ce84fb4894a5-0056deab10
+Date: Tue, 08 Mar 2016 10:36:00 GMT
+
+
+curl -si -X 'HEAD' -H "X-Auth-Token:2:admin" -H "Content-Type: application/json" http://localhost:8099/v2.0/2/storage1
+HTTP/1.1 204 No Content
+Server: Apache-Coyote/1.1
+X-Storage-Policy: Policy-0
+X-Container-Object-Count: 1
+Date: Tue, 08 Mar 2016 10:34:04 GMT
+X-Container-Bytes-Used: 12
+X-Trans-Id: txaba6bd88ef334ebbb0738-0056deaa9c
+X-Timestamp: 1456986723.68054
+Connection: keep-alive
+Accept-Ranges: bytes
+x-compute-request-id: req-8b8008cf-a1a5-4127-a422-ac152dd82326
+Content-Type: text/plain;charset=utf-8
+
+
+curl -si  http://localhost:8099/v2.0/2/storage2 -X POST -H "X-Auth-Token:2:admin" -H "X-Container-Meta-Century: Nineteenth"

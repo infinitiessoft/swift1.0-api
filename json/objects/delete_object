@@ -1,0 +1,11 @@
+request :
+curl -si -X DELETE -H "X-Auth-Token:$TOKEN" http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1/helloworld.txt
+
+response :
+HTTP/1.1 204 No Content
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: txed89b019d3514f14a7874-0056dd145a
+Date: Mon, 07 Mar 2016 05:40:43 GMT
+
+curl -H "X-Auth-Token:2:admin" -H "Content-Type:application/json" -X DELETE http://localhost:8099/v2.0/2/storage1/Users/Tata/hello2.txt

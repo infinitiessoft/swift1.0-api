@@ -1,0 +1,40 @@
+request :
+curl -si -X HEAD -H "X-Auth-Token:$TOKEN"  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61
+
+response :
+
+HTTP/1.1 204 No Content
+Content-Length: 0
+X-Account-Object-Count: 2
+X-Account-Storage-Policy-Policy-0-Bytes-Used: 111378
+X-Account-Storage-Policy-Policy-0-Container-Count: 2
+X-Timestamp: 1456891942.48474
+X-Account-Storage-Policy-Policy-0-Object-Count: 2
+X-Account-Bytes-Used: 111378
+X-Account-Container-Count: 2
+Content-Type: text/plain; charset=utf-8
+Accept-Ranges: bytes
+x-account-project-domain-id: default
+X-Trans-Id: txade8cc294f1f4280a5cde-0056dfa0b7
+Date: Wed, 09 Mar 2016 04:04:07 GMT
+
+
+curl -si -X 'HEAD' -H "X-Auth-Token:2:admin" -H "Content-Type: application/json" http://localhost:8099/v2.0/2
+
+HTTP/1.1 204 No Content
+Server: Apache-Coyote/1.1
+X-Account-Object-Count: 2
+X-Account-Container-Count: 2
+X-Account-Storage-Policy-Policy-0-Bytes-Used: 111378
+Connection: keep-alive
+X-Account-Bytes-Used: 111378
+Date: Wed, 09 Mar 2016 04:03:49 GMT
+x-account-project-domain-id: default
+X-Trans-Id: txc38ad50df1fc40d08e646-0056dfa0a5
+X-Timestamp: 1456891942.48474
+X-Account-Storage-Policy-Policy-0-Container-Count: 2
+X-Account-Storage-Policy-Policy-0-Object-Count: 2
+Accept-Ranges: bytes
+x-compute-request-id: req-26e57856-d3db-4a2a-a921-afc3ccc178ff
+Content-Type: text/plain;charset=utf-8
+

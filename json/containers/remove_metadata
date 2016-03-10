@@ -1,0 +1,15 @@
+request :
+curl -si  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1 -X POST -H "X-Auth-Token: $TOKEN" -H "X-Remove-Container-Meta-Author: MarkTwain"
+
+response :
+HTTP/1.1 204 No Content
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: tx00ecd0a7266a4c6c9ecfa-0056dfec76
+Date: Wed, 09 Mar 2016 09:27:18 GMT
+
+curl -si  http://localhost:8099/v2.0/2/storage2 -X POST -H "X-Auth-Token:2:admin" -H "X-Remove-Container-Meta-Author: MarkTwain"
+HTTP/1.1 204 No Content
+Server: Apache-Coyote/1.1
+x-compute-request-id: req-d9ae780f-d99d-4e55-82fc-8e4321c394bd
+Date: Wed, 09 Mar 2016 09:33:59 GMT

@@ -1,0 +1,28 @@
+request :
+curl -si -X GET -H "X-Auth-Token:$TOKEN"  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61?format=json
+
+HTTP/1.1 200 OK
+Content-Length: 51
+X-Account-Object-Count: 3
+X-Account-Storage-Policy-Policy-0-Bytes-Used: 227970
+X-Account-Storage-Policy-Policy-0-Container-Count: 1
+X-Timestamp: 1456891942.48474
+X-Account-Storage-Policy-Policy-0-Object-Count: 3
+X-Account-Bytes-Used: 227970
+X-Account-Container-Count: 1
+Content-Type: application/json; charset=utf-8
+Accept-Ranges: bytes
+x-account-project-domain-id: default
+X-Trans-Id: txd9988d3a663e4e22b8fdd-0056d9083c
+Date: Fri, 04 Mar 2016 03:59:56 GMT
+
+[{"count": 3, "bytes": 227970, "name": "storage1"}]
+
+curl -H "X-Auth-Token:2:admin" http://localhost:8099/v2.0/2
+{
+  "containers" : [ {
+    "name" : "storage1",
+    "count" : 3,
+    "bytes" : 227970
+  } ]
+}

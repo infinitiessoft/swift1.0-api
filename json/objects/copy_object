@@ -1,0 +1,16 @@
+request :
+curl -si -X COPY -H "X-Auth-Token:$TOKEN" http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1/hello2.txt -H "Destination:storage2/hello2.txt"
+
+resonpse :
+HTTP/1.1 201 Created
+Content-Length: 0
+X-Copied-From-Last-Modified: Mon, 07 Mar 2016 04:08:13 GMT
+X-Copied-From: storage1/hello2.txt
+Last-Modified: Mon, 07 Mar 2016 07:56:10 GMT
+Etag: 09f7e02f1290be211da707a266f153b3
+X-Copied-From-Account: AUTH_842a3fac1ae84d6c9f1153c3613a1b61
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: tx50dce679a0d74a889c551-0056dd3419
+Date: Mon, 07 Mar 2016 07:56:09 GMT
+
+curl -H "X-Auth-Token:2:admin" -H "Content-Type:application/json" -X COPY http://localhost:8099/v2.0/2/storage1/hello2.txt -H "Destination: storage2"

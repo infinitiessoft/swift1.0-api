@@ -1,0 +1,17 @@
+request :
+curl -si -X HEAD -H "X-Auth-Token:$TOKEN"  http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1/hello.txt
+
+response :
+
+HTTP/1.1 200 OK
+Content-Length: 12
+Accept-Ranges: bytes
+Last-Modified: Tue, 08 Mar 2016 05:54:17 GMT
+Etag: e59ff97941044f85df5297e1c302d260
+X-Timestamp: 1457416456.81721
+X-Object-Meta-Orig-Filename: hello.txt
+Content-Type: text/plain
+X-Trans-Id: tx32e9338088d14e4cbc8fa-0056dead4f
+Date: Tue, 08 Mar 2016 10:45:35 GMT
+
+curl -si -X 'HEAD' -H "X-Auth-Token:2:admin" -H "Content-Type: application/json" http://localhost:8099/v2.0/2/storage1/hello.txt

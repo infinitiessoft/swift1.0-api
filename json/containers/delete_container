@@ -1,0 +1,12 @@
+request :
+curl -si -H "X-Auth-Token:$TOKEN" -X DELETE http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1-6
+
+response :
+HTTP/1.1 204 No Content
+Content-Length: 0
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: txb0405502d34b4511b6e0a-0056d94daf
+Date: Fri, 04 Mar 2016 08:56:15 GMT
+
+
+curl -si -H "X-Auth-Token:2:admin" -H "Content-Type:application/json" -X DELETE http://localhost:8099/v2.0/2/storage1-5

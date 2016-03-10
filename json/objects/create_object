@@ -1,0 +1,14 @@
+request :
+curl -si http://128.136.179.2:8080/v1/AUTH_842a3fac1ae84d6c9f1153c3613a1b61/storage1/helloworld.txt -X PUT -T hello.txt -H "Content-Length: 6" -H "Content-Type: text/html; charset=UTF-8" -H "X-Auth-Token: $TOKEN"
+HTTP/1.1 100 Continue
+
+HTTP/1.1 201 Created
+Last-Modified: Mon, 07 Mar 2016 03:38:23 GMT
+Content-Length: 0
+Etag: 09f7e02f1290be211da707a266f153b3
+Content-Type: text/html; charset=UTF-8
+X-Trans-Id: tx52a2972b38fc4451a2b3d-0056dcf7ae
+Date: Mon, 07 Mar 2016 03:38:22 GMT
+
+curl -H "X-Auth-Token:2:admin" -H "Content-Type:application/json" -X PUT http://localhost:8099/v2.0/2/storage1/Users/Tata/hello2.txt
+{"object":{"subdir":null,"name":"hello2.txt","hash":null,"bytes":12,"content_type":null,"last_modified":null}}
